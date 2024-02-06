@@ -137,6 +137,7 @@ const note = document.getElementById('note');
 const cubeContainer = document.querySelector('.cube-container');
 const passwdContainer = document.querySelector('.passwd');
 
+
 // 터치 이벤트를 감지하여 기본 동작 막기
 body.addEventListener('touchstart', function(event) {
     if (event.target !== note && !note.contains(event.target) &&
