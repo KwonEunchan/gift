@@ -4,6 +4,7 @@
     user-select: none;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
 .text-container{
     width: 100vw;
     height: 10vh;
@@ -19,21 +20,22 @@
     margin: auto;
     width: 53vw;
     height: 4vh;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     border: .5vw solid rgba(0,0,0,0.4);
-    display: none;
+    font-size: 2vw;
 }
 input{
     width: 40vw;
+    height: 90%;
     border: none;
     outline: none;
 }
 button{
     width: 10vw;
-    height: 3vh;
+    height: 90%;
     border: none;
     background-color: rgb(100, 170, 200);
     color : white;
@@ -73,6 +75,7 @@ button{
     bottom: 0;
     margin: auto;
     transform: rotateX(0deg) rotateY(0deg) scale(3);
+    z-index: 5;
 }
 
 .sphere.max{

@@ -43,7 +43,7 @@
      const sphere = document.querySelector('.sphere');
 
 
-     cube.addEventListener('click', function () {
+     cube.addEventListener('touchstart', function () {
          const nowEl = document.querySelector('#now')
          if (nowEl.innerHTML === '00:00:00' || cube.classList.contains('key')) {
              cube.style.animation = 'none';
@@ -69,7 +69,7 @@
  let green = 0;
  let blue = 0;
 
- sphere.addEventListener('mousedown', function () {
+ sphere.addEventListener('touchstart', function () {
      const alert = document.querySelector('.alert')
      alert.style.opacity = '0'
      intervalId = setInterval(function () {
@@ -93,7 +93,7 @@
      }, 100); // 0.1초마다 색상을 변경
  });
 
- sphere.addEventListener('mouseup', function () {
+ sphere.addEventListener('touchend', function () {
      clearInterval(intervalId); // 인터벌 제거
      if (green !== 112 && blue !== 74) {
          sphere.style.backgroundColor = 'white'; // 클릭을 해제할 때만 색을 다시 흰색으로 변경
@@ -108,7 +108,7 @@
  });
 
  const button = document.querySelector('button')
- button.addEventListener('click',()=>{
+ button.addEventListener('touchstart',()=>{
     const input = document.querySelector('input')
     if(input.value==='ireallylovechan'){
         const cube = document.querySelector('.cube');
@@ -116,14 +116,17 @@
         const passwd = document.querySelector('.passwd')
         passwd.style.display = 'none'
     }
+    else{
+        alert("찍지마..")
+    }
  })
 
  const noteEl = document.querySelector('#note')
- noteEl.addEventListener('click',()=>{
+ noteEl.addEventListener('touchstart',()=>{
     if(noteEl.innerHTML==='시간이 되기 전에 민주님 만났다면 터치'){
         alert('남자친구한테 암호 물어보세요 !')
         const passwd = document.querySelector('.passwd')
-        passwd.style.display = 'block'
+        passwd.style.display = 'flex'
         
     }
  })
