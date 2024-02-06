@@ -41,6 +41,12 @@ input{
     height: 90%;
     border: none;
     outline: none;
+    font-size: 2vw;
+        /* 브라우저 기본 스타일을 재설정할 수 있도록 아래 속성을 추가합니다. */
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
 }
 button{
     width: 10vw;
