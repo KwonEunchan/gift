@@ -165,3 +165,17 @@ body.addEventListener('touchend', function(event) {
         event.preventDefault();
     }
 });
+
+function disableZoom() {
+    document.addEventListener('touchmove', preventZoom, { passive: false });
+}
+
+// 확대 이벤트를 막는 함수
+function preventZoom(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}
+
+// 모바일 환경에서의 확대 막기 함수 호출
+disableZoom();
