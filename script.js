@@ -179,3 +179,10 @@ function preventZoom(event) {
 
 // 모바일 환경에서의 확대 막기 함수 호출
 disableZoom();
+
+document.querySelectorAll('*').forEach(function(element) {
+    element.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+});
