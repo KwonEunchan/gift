@@ -131,67 +131,36 @@
     }
  })
 
- // 터치를 막을 요소를 가져오기
+// 터치를 막을 요소를 가져오기
 const body = document.querySelector('body');
+const note = document.getElementById('note');
 const cubeContainer = document.querySelector('.cube-container');
-const letterContainer = document.querySelector('.letter-container');
-const alertContainer = document.querySelector('.alert-container');
+const passwdContainer = document.querySelector('.passwd');
 
 // 터치 이벤트를 감지하여 기본 동작 막기
 body.addEventListener('touchstart', function(event) {
-    // cubeContainer 내부의 터치를 막음
-    if (!cubeContainer.contains(event.target)) {
+    if (event.target !== note && !note.contains(event.target) &&
+        event.target !== cubeContainer && !cubeContainer.contains(event.target) &&
+        event.target !== passwdContainer && !passwdContainer.contains(event.target) &&
+        event.target !== sphere) {
         event.preventDefault();
     }
 });
 
 body.addEventListener('touchmove', function(event) {
-    // cubeContainer 내부의 터치를 막음
-    if (!cubeContainer.contains(event.target)) {
+    if (event.target !== note && !note.contains(event.target) &&
+        event.target !== cubeContainer && !cubeContainer.contains(event.target) &&
+        event.target !== passwdContainer && !passwdContainer.contains(event.target) &&
+        event.target !== sphere) {
         event.preventDefault();
     }
 });
 
 body.addEventListener('touchend', function(event) {
-    // cubeContainer 내부의 터치를 막음
-    if (!cubeContainer.contains(event.target)) {
+    if (event.target !== note && !note.contains(event.target) &&
+        event.target !== cubeContainer && !cubeContainer.contains(event.target) &&
+        event.target !== passwdContainer && !passwdContainer.contains(event.target) &&
+        event.target !== sphere) {
         event.preventDefault();
     }
-});
-
-// 터치를 막을 요소들이 있는 컨테이너에 대해서도 터치를 막기
-cubeContainer.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-});
-
-cubeContainer.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
-
-cubeContainer.addEventListener('touchend', function(event) {
-    event.preventDefault();
-});
-
-letterContainer.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-});
-
-letterContainer.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
-
-letterContainer.addEventListener('touchend', function(event) {
-    event.preventDefault();
-});
-
-alertContainer.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-});
-
-alertContainer.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
-
-alertContainer.addEventListener('touchend', function(event) {
-    event.preventDefault();
 });
