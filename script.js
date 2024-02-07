@@ -49,7 +49,7 @@
              cube.style.animation = 'none';
 
              faces.forEach((face) => {
-                 face.style.transform = 'scale(1000)'
+                 face.style.transform = 'scale(-15)'
                  face.style.opacity = '0'
              })
 
