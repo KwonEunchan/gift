@@ -1,5 +1,5 @@
  // const targetDate = new Date('2024-02-16T20:00:00').getTime();
- const targetDate = new Date('2024-02-16T20:30:00').getTime();
+ const targetDate = new Date('2024-02-16T22:00:00').getTime();
 
  function calculateTimeLeft(targetDate) {
      const now = new Date().getTime(); // 현재 시간을 milliseconds로 가져옴
